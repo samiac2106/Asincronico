@@ -35,3 +35,25 @@ conectarConNetflix(datosUsuario,function(codigo){//estoy en la zona comun
     }
 
 })  
+function conectarConNetflix(datos){
+    console.log("procesando la petición.....");
+
+    let promesa =new Promise(function(resolve,reject){   
+
+    setTimeout(function(){
+
+        if(datos.usuario==="samiac2106" && datos.password==="Admin123*"){
+            //login ok
+           resolve(200,"Bienvenido a Netflix")
+        } else{
+            //login fail
+            reject(204,"No estas registrado, inscribete")    
+        }
+    },5000)
+  })
+    return promesa;
+
+    //preguntar si los datos son correctos 
+
+
+} 
